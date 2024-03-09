@@ -11,6 +11,7 @@ import Projects from "../components/Projects.astro";
 import ProfileCheck from "../components/Icons/ProfileCheck.astro";
 import Footer from "../components/Footer.astro";
 import Contact from "../components/Contact.astro";
+import Skills from "../components/Skills.astro";
 
 interface Props {
 	title: string;
@@ -39,7 +40,7 @@ const { description, title } = Astro.props;
 		<main>
 			<section class="w-full mx-auto lg:w-[740] py-44 flex flex-col items-center justify-center text-white">
 				<h1 class="text-5xl font-bold flex items-center flex-col gap-y-4">
-					Me llamo Bruno Corvalan
+					Soy Bruno Corvalan
 					<Badge class="text-sm">empleo</Badge>
 				</h1>
 				<h2 class="text-xl opacity-80 text-center">
@@ -88,6 +89,14 @@ const { description, title } = Astro.props;
             Sobre mí
         </h2>
         <AboutMe />
+    </SectionContainer>
+
+	<SectionContainer id="sobre-mi" class="mb-8">
+        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-white/80 dark:text-white">
+            <ProfileCheck class="size-8" />
+            Habilidades
+        </h2>
+        <Skills />
     </SectionContainer>
 
 	<SectionContainer id="Contacto" class="mb-8">
