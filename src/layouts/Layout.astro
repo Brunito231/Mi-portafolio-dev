@@ -13,7 +13,7 @@ import Footer from "../components/Footer.astro";
 import Contact from "../components/Contact.astro";
 import Skills from "../components/Skills.astro";
 import {Image} from "astro:assets"
-
+ 
 
 
 interface Props {
@@ -30,10 +30,10 @@ const { description, title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link rel="icon" type="image/png" href="public/linkpixel1.png" />
+		<link rel="icon" type="image/png" href="/linkpixel1.png" />
 		<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" href="public/linkpixel1.png" type="image/png">
+		<link rel="icon" href="/linkpixel1.png" type="image/png">
 
 		<title>{title}</title>
 	</head>
