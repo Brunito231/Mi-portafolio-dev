@@ -13,6 +13,7 @@ import Footer from "../components/Footer.astro";
 import Contact from "../components/Contact.astro";
 import Skills from "../components/Skills.astro";
 
+
 interface Props {
 	title: string;
 	description: string;
@@ -27,10 +28,12 @@ const { description, title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="public/linkpixel1.gif" />
 		<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" href="images/logo.jpg" type="image/png">
+		<link rel="icon" href="public/linkpixel1.gif" type="image/gif"> <!-- Agrega esta línea para el icono animado -->
+
 		<title>{title}</title>
 	</head>
 	<body>
@@ -82,7 +85,7 @@ const { description, title } = Astro.props;
         </h2>
         <Projects />
     </SectionContainer>
-	
+    
     <SectionContainer id="sobre-mi" class="mb-8">
         <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-white/80 dark:text-white">
             <ProfileCheck class="size-8" />
@@ -91,7 +94,7 @@ const { description, title } = Astro.props;
         <AboutMe />
     </SectionContainer>
 
-	<SectionContainer id="sobre-mi" class="mb-8">
+    <SectionContainer id="sobre-mi" class="mb-8">
         <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-white/80 dark:text-white">
             <ProfileCheck class="size-8" />
             Habilidades
@@ -99,15 +102,15 @@ const { description, title } = Astro.props;
         <Skills />
     </SectionContainer>
 
-	<SectionContainer id="Contacto" class="mb-8">
+    <SectionContainer id="Contacto" class="mb-8">
         <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-white/80 dark:text-white">
             <ProfileCheck class="size-8" />
             Contacto
         </h2>
         <Contact />
     </SectionContainer>
-
 </div>
+
 <Footer></Footer>
 	</body>
 	
