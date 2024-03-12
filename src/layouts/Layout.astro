@@ -12,7 +12,7 @@ import ProfileCheck from "../components/Icons/ProfileCheck.astro";
 import Footer from "../components/Footer.astro";
 import Contact from "../components/Contact.astro";
 import Skills from "../components/Skills.astro";
-import {Image} from "astro:assets"
+import Appbar from "../components/Appbar.astro";
 
  
 interface Props {
@@ -36,193 +36,181 @@ const { description, title } = Astro.props;
 
 		<title>{title}</title>
 	</head>
-	<body>
-		
-	<div class="relative">
-		<div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
-		<Header></Header>
-		<main>
-			<section class="w-full mx-auto lg:w-[740] py-44 flex flex-col items-center justify-center text-white">
+	
+	<body class="gradient-background">
+		<Appbar> </Appbar>
+		<div class="hero relative">
+		  <video muted autoplay loop class="z-0">
+			<source src="/particles.mp4" type="video/mp4">
+		  </video>
+		  <div class="capa"></div>
+		  <div class="relative z-10">
+			<Header></Header>
+			<main>
+			  <section class="w-full mx-auto lg:w-[740] py-44 flex flex-col items-center justify-center text-white">
 				<h1 class="text-5xl font-bold flex items-center flex-col gap-y-4">
-					Soy Bruno Corvalan
-					<Badge class="text-sm">empleo</Badge>
+				  Soy Bruno Corvalan
+				  <Badge class="text-sm">empleo</Badge>
 				</h1>
 				<h2 class="text-xl opacity-80 text-center">
-					Desarrollador Full-stack y estudiante de ingeniería en sistemas. Amante de los videojuegos, programador de mods y entusiasta de la tecnología. Especializado en desarrollo y programación web.				</h2>
+				  Desarrollador Full-stack y estudiante de ingeniería en sistemas. Amante de los videojuegos, programador de mods y entusiasta de la tecnología. Especializado en desarrollo y programación web.
+				</h2>
 				<div class="flex gap-4 mt-4">
-					<a href="https://www.linkedin.com/in/bruno-corvalan-1a9766169/" class="icon-linkedin" target="_blank" rel="noopener noreferrer">
-						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin animate-bounce" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-							<path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
-							<path d="M8 11l0 5" />
-							<path d="M8 8l0 .01" />
-							<path d="M12 16l0 -5" />
-							<path d="M16 16v-3a2 2 0 0 0 -4 0" />
-						</svg>
-					</a>
-					<a href="https://github.com/Brunito231?tab=repositories" class="icon-github" target="_blank" rel="noopener noreferrer">
-						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github animate-bounce" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-							<path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-						</svg>
-					</a>
+				  <a href="https://www.linkedin.com/in/bruno-corvalan-1a9766169/" class="icon-linkedin" target="_blank" rel="noopener noreferrer">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin animate-bounce" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+					  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+					  <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+					  <path d="M8 11l0 5" />
+					  <path d="M8 8l0 .01" />
+					  <path d="M12 16l0 -5" />
+					  <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+					</svg>
+				  </a>
+				  <a href="https://github.com/Brunito231?tab=repositories" class="icon-github" target="_blank" rel="noopener noreferrer">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github animate-bounce" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+					  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+					  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+					</svg>
+				  </a>
 				</div>
-				
-			</section>
-		</main>
-		<div class="mt-8">
-    <SectionContainer id="Experiencia" class="mb-8">
-        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
-            <Briefcase class="size-8" />
-            Experiencia laboral
-        </h2>
-        <Experience />
-    </SectionContainer>
+			  </section>
+			</main>
+			<div class="hero content-container">
+			<div class="mt-8">
+			  <SectionContainer id="Experiencia" class="mb-8">
+				<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
+				  <Briefcase class="size-8" />
+				  Experiencia laboral
+				</h2>
+				<Experience />
+			  </SectionContainer>
+			  <div class="hero content-container">
+			  <SectionContainer id="Proyectos" class="mb-8">
+				<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
+				  <Briefcase class="size-8" />
+				  Proyectos
+				</h2>
+				<Projects />
+			  </SectionContainer>
+			  <div class="hero content-container">
+			  <SectionContainer id="sobre-mi" class="mb-8">
+				<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-white/80 dark:text-white">
+				  <ProfileCheck class="size-8" />
+				  Sobre mí
+				</h2>
+				<AboutMe />
+			  </SectionContainer>
+			  <div class="hero content-container">
+			  <SectionContainer id="sobre-mi" class="mb-8">
+				<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-white/80 dark:text-white">
+				  <Code class="size-8" />
+				  Habilidades
+				</h2>
+				<Skills />
+			  </SectionContainer>
+			  <div class="hero content-container">
+			  <SectionContainer id="Contacto" class="mb-8">
+				<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-white/80 dark:text-white">
+				  <ProfileCheck class="size-8" />
+				  <u>Contacto:</u>
+				</h2>
+				<Contact />
+			  </SectionContainer>
+			<div class="hero content-container">
+	    <Footer></Footer>
+	  </body>
+	  </html>
+	  
+	  <style is:global>
+		:root {
+		  color-scheme: light dark;
+		}
+	  
+		html {
+		  font-family: "onest variable" system-ui, sans-serif;
+		  scroll-behavior: smooth;
+		}
+	  
+		.gradient-background {
+		  background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
+		  background-attachment: fixed;
+		}
+	  
+		body {
+			margin-bottom: 0;
+		  background: #13151a;
+		  display: flex;
+		  flex-direction: column;
+		  height: 100vh;
+		  scroll-behavior: smooth;
+		  position: relative;
+		  z-index: 2;
+		}
+	  
+		@media (prefers-reduced-motion: reduce) {
+		  html {
+			scroll-behavior: auto;
+		  }
+		}
+	  
+		.circle-highlight {
+		  position: absolute;
+		  width: 100%;
+		  height: 100%;
+		  background-color: rgba(255, 255, 255, 0);
+		  border-radius: 50%;
+		  transition: background-color 0.3s ease;
+		  pointer-events: none;
+		}
+	  
+		.button:hover .circle-highlight {
+		  background-color: rgba(255, 255, 255, 0.3);
+		}
+	  
+		.hero {
+		  min-height: 50vh;
+		  position: relative;
+		}
+	  
+		video {
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  object-fit: cover;
+		  z-index: 1;
+		}
+	  
+		@keyframes show{
+			from{
+				opacity: 0;
+				scale: 25%;
+			}
+			to{
+				opacity: 1;
+				scale: 100%;
+			}
+		}
+			img{
+				view-timeline-name: --image;
+				view-timeline-axis: block;
 
-    <SectionContainer id="Proyectos" class="mb-8">
-        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white/80 dark:text-white">
-            <Briefcase class="size-8" />
-            Proyectos
-        </h2>
-        <Projects />
-    </SectionContainer>
-    
-    <SectionContainer id="sobre-mi" class="mb-8">
-        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-white/80 dark:text-white">
-            <ProfileCheck class="size-8" />
-            Sobre mí
-        </h2>
-        <AboutMe />
-    </SectionContainer>
+				animation-timeline: --image;
+				animation-name:show ;
+				animation-range: entry 10% cover 20%;
+			}
+			.content-container {
+                 view-timeline-name: --content;
+                 view-timeline-axis: block;
 
-    <SectionContainer id="sobre-mi" class="mb-8">
-        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-white/80 dark:text-white">
-            <Code class="size-8" />
-            Habilidades
-        </h2>
-        <Skills />
-    </SectionContainer>
+                animation-timeline: --content;
+                animation-name: show;
+				animation-range: entry 10% cover 20%;
+				animation-fill-mode: both;
 
-    <SectionContainer id="Contacto" class="mb-8">
-        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-white/80 dark:text-white">
-            <ProfileCheck class="size-8" />
-            <u>Contacto:</u>
-        </h2>
-        <Contact />
-    </SectionContainer>
-</div>
+              
+			}
 
-    <!-- Barra de aplicación -->
-    <div class="fixed z-50 w-full h-12 max-w-lg -translate-x-1/2 bg-purple-900 bg-opacity-80 backdrop-blur-md border-none rounded-full bottom-12 left-1/2 dark:bg-transparent">
-        <div class="grid h-full max-w-lg grid-cols-5 mx-auto">
-            <!-- Botones de la barra de aplicación -->
-            <a href="#top" class="relative inline-flex flex-col items-center justify-center p-2 rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 group transition-transform duration-300 ease-in-out transform hover:scale-110">
-                <div class="circle-highlight"></div>
-                <!-- Icono y contenido del botón "Inicio" -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M12 17v-14" />
-                    <path d="M15 6l-3 -3l-3 3" />
-                    <path d="M12 17a2 2 0 1 0 0 4a2 2 0 0 0 0 -4" />
-                </svg>
-                <span class="sr-only">Inicio</span>
-            </a>
-
-			<button data-tooltip-target="tooltip-about" type="button" class="relative inline-flex flex-col items-center justify-center p-2 rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 group transition-transform duration-300 ease-in-out transform hover:scale-110" onclick="window.location.href='#Experiencia';">
-				<!-- Icono y contenido del botón "About" -->
-				<div class="circle-highlight"></div>
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
-					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-					<path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z" />
-					<path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
-				</svg>
-				<span class="sr-only">About</span>
-			</button>
-		
-		
-			<button data-tooltip-target="tooltip-code" type="button" class="relative inline-flex flex-col items-center justify-center p-2 rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 group transition-transform duration-300 ease-in-out transform hover:scale-110" onclick="window.location.href='#Proyectos';">
-				<!-- Icono y contenido del botón "Code" -->
-				<div class="circle-highlight"></div>
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
-					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-					<path d="M7 8l-4 4l4 4" />
-					<path d="M17 8l4 4l-4 4" />
-					<path d="M14 4l-4 16" />
-				</svg>
-				<span class="sr-only">Code</span>
-			</button>
-
-			<button data-tooltip-target="tooltip-user" type="button" class="relative inline-flex flex-col items-center justify-center p-2 rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 group transition-transform duration-300 ease-in-out transform hover:scale-110" onclick="window.location.href='#sobre-mi';">
-				<!-- Icono y contenido del botón "User" -->
-				<div class="circle-highlight"></div>
-				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
-					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-					<circle cx="12" cy="7" r="4" />
-					<path d="M6 21v-2a8.625 8.625 0 0 1 6 -3.165a8.625 8.625 0 0 1 6 3.165v2" />
-				</svg>
-				<span class="sr-only">User</span>
-			</button>
-
-			<button data-tooltip-target="tooltip-contact" type="button" class="relative inline-flex flex-col items-center justify-center p-2 rounded-full hover:bg-gray-50 dark:hover:bg-gray-800 group transition-transform duration-300 ease-in-out transform hover:scale-110" onclick="window.location.href='#Contacto';">
-				<!-- Icono y contenido del botón "Contacto" -->
-				<div class="circle-highlight"></div>
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
-					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-					<path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
-					<path d="M3 7l9 6l9 -6" />
-				</svg>
-				<span class="sr-only">Contacto</span>
-			</button>
-	</div>
-</div>
-           
-
-
-<Footer></Footer>
-	</body>
-	
-</html> 
-<style is:global>
-	:root {
-		color-scheme: light dark;
-		
-		
-	}
-	html {
-		font-family: "onest variable" system-ui, sans-serif;
-		scroll-behavior: smooth;
-		
-	}
-	.gradient-background {
-    background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
-    background-attachment: fixed;
-}
-	body {
-		background: #13151a;
-		display: flex;
-		flex-direction: column;
-		height: 100vh;
-		scroll-behavior: smooth;
-		
-		
-	}
-	@media (prefers-reduced-motion: reduce){
-	html {
-		scroll-behavior: auto;
-	}
-}
-.circle-highlight {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0);
-            border-radius: 50%;
-            transition: background-color 0.3s ease;
-            pointer-events: none;
-        }
-
-        .button:hover .circle-highlight {
-            background-color: rgba(255, 255, 255, 0.3);
-        }
-
-</style>
+			
+	  </style>
